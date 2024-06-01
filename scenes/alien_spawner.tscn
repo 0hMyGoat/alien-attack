@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://ikljfni8shui"]
+
+[ext_resource type="Script" path="res://scripts/alien_spawner.gd" id="1_122p4"]
+
+[node name="AlienSpawner" type="Node"]
+script = ExtResource("1_122p4")
+
+[node name="SpawnPositions" type="Node" parent="."]
+
+[node name="pos_01" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1346, 100)
+
+[node name="pos_02" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1346, 200)
+
+[node name="pos_03" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1346, 300)
+
+[node name="pos_04" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1346, 400)
+
+[node name="pos_05" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1346, 500)
+
+[node name="pos_06" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1346, 600)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
