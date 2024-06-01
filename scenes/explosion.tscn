@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://or7jglwsk4f5"]
+[gd_scene load_steps=7 format=3 uid="uid://or7jglwsk4f5"]
+
+[ext_resource type="Script" path="res://scripts/explosion.gd" id="1_0ac3w"]
 
 [sub_resource type="Gradient" id="Gradient_or4jt"]
 colors = PackedColorArray(0.980392, 0, 0, 1, 1, 0.968627, 0, 0.458824)
@@ -33,3 +35,4 @@ amount = 50
 process_material = SubResource("ParticleProcessMaterial_gxe2k")
 one_shot = true
 explosiveness = 1.0
+script = ExtResource("1_0ac3w")

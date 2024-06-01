@@ -44,7 +44,7 @@ script = ExtResource("1_rohw7")
 [node name="FlameParticleEffect" type="GPUParticles2D" parent="."]
 position = Vector2(-31, 1)
 rotation = -1.57079
-amount = 100
+amount = 20
 process_material = SubResource("ParticleProcessMaterial_ywqm5")
 lifetime = 0.3
 

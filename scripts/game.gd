@@ -24,6 +24,7 @@ func _on_player_took_dammage() -> void:
 	lives -= 1
 	HUD_LAYOUT.update_lives(lives)
 	if lives == 0:
+		explode(PLAYER.get_position())
 		PLAYER.die()
 
 		await get_tree().create_timer(1.5).timeout
@@ -37,14 +38,16 @@ func _on_alien_spawner_alien_spawned(aliens: Aliens):
 	aliens.connect("died", _on_alien_died)
 
 func _on_alien_died(alien_position: Vector2):
-	var expl = EXPLOSION.instantiate()
-	expl.emitting = true
-	expl.set_position(alien_position)
-	add_child(expl)
-
 	alien_hit_sound.play()
 	score += 10
 	HUD_LAYOUT.update_score(score)
+	explode(alien_position)
 
 func _on_death_zone_missed_ennemy() -> void:
 	_on_player_took_dammage()
+
+func explode(position: Vector2) -> void:
+	var explosion_particles = EXPLOSION.instantiate()
+	explosion_particles.emitting = true
+	explosion_particles.set_position(position)
+	add_child(explosion_particles)
