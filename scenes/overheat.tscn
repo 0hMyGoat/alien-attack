@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c545jr2h227e2"]
+
+[ext_resource type="FontFile" uid="uid://bixek4x6ooaml" path="res://assets/font/Kenney Blocks.ttf" id="1_v4yl1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pr6h"]
+bg_color = Color(0.6, 0, 0, 0.172549)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bkdx1"]
+font = ExtResource("1_v4yl1")
+font_size = 32
+
+[node name="Overheat" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1282.0
+offset_bottom = 722.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5pr6h")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 544.0
+offset_top = 331.0
+offset_right = 736.0
+offset_bottom = 379.0
+text = "OVERHEAT"
+label_settings = SubResource("LabelSettings_bkdx1")
