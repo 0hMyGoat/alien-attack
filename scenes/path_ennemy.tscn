@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d37dkfhy0duml"]
+
+[ext_resource type="Script" path="res://scripts/PathEnnemy.gd" id="1_j6vmh"]
+[ext_resource type="PackedScene" uid="uid://cf2mexgife2cw" path="res://scenes/aliens.tscn" id="2_gfext"]
+
+[sub_resource type="Curve2D" id="Curve2D_3p7r1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -159, 630, 0, 0, 0, 0, 136, 642, -39.1995, 44.5449, 39.1995, -44.5449, 288, 580, 0, 0, 0, 0, 396, 434, -57.9564, -13.8591, 57.9564, 13.8591, 619, 248, 0, 0, 0, 0, 723, 291, -25.6057, 44.7384, 25.6057, -44.7384, 858, 302, 0, 0, 0, 0, 863, 216, 0, 0, 0, 0, 794, 147, -6.2996, 57.9564, 6.2996, -57.9564, 735, 84, 0, 0, 0, 0, 883, 58, -18.8988, -23.9385, 18.8988, 23.9385, 1029, 109, -55.4365, -44.0972, 55.4365, 44.0972, 1058, 273, -37.7976, 16.379, 37.7976, -16.379, 1200, 305, 0, 0, 0, 0, 1277, 200, 0, 0, 0, 0, 1410, 24, 0, 0, 0, 0, 1474, -69)
+}
+point_count = 17
+
+[node name="PathEnnemy" type="Path2D"]
+curve = SubResource("Curve2D_3p7r1")
+script = ExtResource("1_j6vmh")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-159, 630)
+rotation = 0.0406556
+
+[node name="Alien" parent="PathFollow2D" instance=ExtResource("2_gfext")]
+SPEED = 0

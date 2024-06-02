@@ -39,6 +39,7 @@ stream = ExtResource("8_bp3sf")
 [connection signal="overheat" from="Player" to="." method="_on_player_overheat"]
 [connection signal="took_dammage" from="Player" to="." method="_on_player_took_dammage"]
 [connection signal="alien_spawned" from="AlienSpawner" to="." method="_on_alien_spawner_alien_spawned"]
+[connection signal="path_alien_spawned" from="AlienSpawner" to="." method="_on_alien_spawner_path_alien_spawned"]
 [connection signal="missed_ennemy" from="DeathZone" to="." method="_on_death_zone_missed_ennemy"]
 
 [editable path="DeathZone"]

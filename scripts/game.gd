@@ -38,6 +38,9 @@ func _on_alien_spawner_alien_spawned(aliens: Aliens):
 	add_child(aliens)
 	aliens.connect("died", _on_alien_died)
 
+func _on_alien_spawner_path_alien_spawned(aliens: Aliens):
+	aliens.connect("died", _on_alien_died)
+
 func _on_alien_died(alien_position: Vector2):
 	alien_hit_sound.play()
 	score += 10
